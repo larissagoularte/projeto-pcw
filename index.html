@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="assets/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetBuddy: Pet Companion Robot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    .hidden { display: none; }
+
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+
+  </style>
+</head>
+<body class="bg-[#fbfbfa]">
+  <!--HEADER-->
+  <header class="flex justify-center items-center p-3 text-red-500 font-bold body-font border-b bg-white">
+    <img src="assets/icon.png" class="w-12">
+    <div class="text-[30px] text-gray-900">PetBuddy</div>
+  </header>
+
+  <!--CONTENT-->
+  <div class="MAIN-CONTENT grid grid-cols-1 gap-5 py-10 px-36">
+    <div class="PAGE-TITLE w-full flex flex-col items-center text-center">
+      <div class="text-gray-900 tracking-wider font-extrabold text-2xl">PetBuddy: Pet Companion Robot</div>
+      <div class="text-gray-900 text-lg">Your pet’s smartest companion for care, play, and health monitoring</div>
+    </div>
+
+    <div class="SUB-TITLE-CONTENT flex flex-col md:flex-row gap-5">
+      <div class="VIDEO bg-gray-200 md:w-2/3 h-96 flex justify-center items-center">
+        <span class="material-symbols-outlined text-white">
+          play_circle
+          </span>
+      </div>
+      <div class="PROGRESS md:w-1/3">
+        <div class="PROGRESS-BAR bg-red-500 h-2 rounded"></div>
+        <div class="font-extrabold text-red-500 mt-3 text-3xl" >$3000</div>
+        <div class="text-sm text-gray-500">40% of goal reached</div>
+
+        <div class="text-3xl font-extrabold text-gray-600 mt-5">10</div>
+        <div class="text-sm text-gray-500">people donated</div>
+
+        <div class="text-3xl font-extrabold text-gray-600 mt-5">15</div>
+        <div class="text-sm text-gray-500">days remaining</div>
+        
+        <button class="bg-red-500 text-white font-bold w-full px-5 py-3 rounded mt-3">Donate</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="TAB-MENU text-sm font-medium text-center text-gray-500 border-b border-t border-gray-300 px-10 ">
+    <ul class="flex flex-wrap -mb-px justify-center">
+        <li class="me-2">
+            <a href="#" id="about-tab" class="inline-block p-4 text-red-600 border-b-2 border-red-600 rounded-t-lg active dark:text-red-500 dark:border-red-500" aria-current="page">About</a>
+        </li>
+        <li class="me-2">
+            <a href="#" id="rewards-tab" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-red-500">Rewards</a>
+        </li>
+        <li class="me-2">
+            <a href="#" id="goals-tab" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Goals</a>
+        </li>
+        <li class="me-2">
+            <a href="#" id="contacts-tab" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">Our Team</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="TAB-MENU-CONTENT text-gray-900 px-28 py-10 flex justify-center">
+    <div id="about-content">
+      <div class="flex flex-col items-center">
+        <div class="flex gap-8 md:flex-row flex-col items-center">
+          <div class="flex flex-col w-96 gap-1">
+            <img src="assets/AI-Render.webp" class="w-96"/>
+            <div class="text-xs text-gray-400">*This is an AI render inspired on the concept. Real product may be wildly different.</div>
+          </div>
+          <div class="w-96 md:text-start text-center text-gray-900"><span class="font-semibold text-red-500">PetBuddy</span> is a home interaction robot designed to provide companionship, entertainment, and care for pets. It can perform a variety of functions to ensure pets are always happy and healthy, even when no one is home. With advanced features, PetBuddy can play with your pets, monitor their well-being, and offer comfort, making it an essential companion for pet owners who want the best for their furry friends.</div>
+        </div>
+
+        <div class="flex flex-col items-center p-5">
+          <section class="text-gray-600 body-font">
+            <div class="container mx-auto">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-10">Main Features</h1>
+              <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                
+                <div class="p-4 md:w-1/3 flex">
+                  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4 flex-shrink-0">
+                    <img src="assets/AI.png" class="w-8" /> 
+                  </div>
+                  <div class="flex-grow pl-6">
+                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">AI System for Pet Habits</h2>
+                    <p class="leading-relaxed text-base">Analyzes and learns animal habits, predicting needs and offering proactive care.</p>
+                  </div>
+                </div>
+
+                <div class="p-4 md:w-1/3 flex">
+                  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4 flex-shrink-0">
+                    <img src="assets/feeding.png" class="w-8" /> 
+                  </div>
+                  <div class="flex-grow pl-6">
+                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Automated Feeding System</h2>
+                    <p class="leading-relaxed text-base">Equipped with a food dispenser and retractable bowl, feeds pets based on AI predictions or owner commands, reducing waste and mess.</p>
+                  </div>
+                </div>
+
+                <div class="p-4 md:w-1/3 flex">
+                  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4 flex-shrink-0">
+                    <img src="assets/water.png" class="w-8" /> 
+                  </div>
+                  <div class="flex-grow pl-6">
+                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Water Storage System</h2>
+                    <p class="leading-relaxed text-base">Ideal for long absences, with automatic refill via sensors or remote command.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="p-4 md:w-1/3 flex">
+                  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4 flex-shrink-0">
+                    <img src="assets/health.png" class="w-8" /> 
+                  </div>
+                  <div class="flex-grow pl-6">
+                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Health Monitoring</h2>
+                    <p class="leading-relaxed text-base">Tracks physical metrics and activities, generating detailed health reports.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-4 md:w-1/3 flex">
+                  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4 flex-shrink-0">
+                    <img src="assets/video.png" class="w-8" /> 
+                  </div>
+                  <div class="flex-grow pl-6">
+                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Video and Audio</h2>
+                    <p class="leading-relaxed text-base">Includes camera, microphone, and LCD screen for real-time video and audio communication with pets.                    </p>
+                  </div>
+                </div>
+
+                <div class="p-4 md:w-1/3 flex">
+                  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4 flex-shrink-0">
+                    <img src="assets/wheel.png" class="w-8" /> 
+                  </div>
+                  <div class="flex-grow pl-6">
+                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Omnidirectional Wheels</h2>
+                    <p class="leading-relaxed text-base">Moves freely around the house, following the pet using proximity sensors.                    </p>
+                  </div>
+                </div>
+
+                <div class="p-4 md:w-1/3 flex">
+                  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4 flex-shrink-0">
+                    <img src="assets/arms.png" class="w-8" /> 
+                  </div>
+                  <div class="flex-grow pl-6">
+                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Mechanical Arms for Playing</h2>
+                    <p class="leading-relaxed text-base">Interactive arms to hold and move toys, like cat wands and dog balls.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-4 md:w-1/3 flex">
+                  <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4 flex-shrink-0">
+                    <img src="assets/app.png" class="w-8" /> 
+                  </div>
+                  <div class="flex-grow pl-6">
+                    <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Mobile App Control</h2>
+                    <p class="leading-relaxed text-base">Full control via mobile app with notifications.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div id="rewards-content" class="hidden flex flex-col">
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 mx-auto">
+          <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-5 flex-shrink-0">
+                <img src="assets/email.png" class="w-12 mt-2">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Digital Thanks</h2>
+                <p class="leading-relaxed text-base">A personalized thank you sent by email and the name of the supporter listed on the official PetBuddy website as one of the initial supporters.</p>
+                <button class="flex mx-auto mt-5 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Donate $10</button>
+
+              </div>
+            </div>
+            
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-5 flex-shrink-0">
+                <img src="assets/sticker.png" class="w-12">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Exclusive Sticker</h2>
+                <p class="leading-relaxed text-base">An exclusive PetBuddy sticker and all the benefits of the previous level.</p>
+                <button class="flex mx-auto mt-5 md:mt-[70px] text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Donate $25</button>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-5 flex-shrink-0">
+                <img src="assets/keychain.png" class="w-12">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Keychain</h2>
+                <p class="leading-relaxed text-base">An exclusive PetBuddy keychain and all the benefits of the previous level.</p>
+                <button class="flex mx-auto mt-5 md:mt-[70px] text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Donate $50</button>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-5 flex-shrink-0">
+                <img src="assets/appstore.png" class="w-12">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Early Access to the App</h2>
+                <p class="leading-relaxed text-base">Early access to the app to help test and provide feedback, plus all previous rewards.</p>
+                <button class="flex mx-auto mt-5 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Donate $75</button>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-5 flex-shrink-0">
+                <img src="assets/tshirt.png" class="w-12">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">T-Shirt</h2>
+                <p class="leading-relaxed text-base">An exclusive PetBuddy t-shirt, along with all the rewards from the previous levels.</p>
+                <button class="flex mx-auto mt-5 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Donate $100</button>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-5 flex-shrink-0">
+                <img src="assets/pettoy.png" class="w-12">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">PetBuddy Mini</h2>
+                <p class="leading-relaxed text-base">A mini version of PetBuddy (a pet toy), plus all the rewards from the previous levels.</p>
+                <button class="flex mx-auto mt-5 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Donate $250</button>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-5 flex-shrink-0">
+                <img src="assets/hot-sale.png" class="w-12">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Early Supporter Discount</h2>
+                <p class="leading-relaxed text-base">A PetBuddy with a special early supporter discount, along with all previous rewards.</p>
+                <button class="flex mx-auto mt-5 md:mt-[50px] text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Donate $500</button>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-5 flex-shrink-0">
+                <img src="assets/vip-card.png" class="w-12">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Limited Edition</h2>
+                <p class="leading-relaxed text-base">A PetBuddy with a special early supporter discount, along with all previous rewards.</p>
+                <button class="flex mx-auto mt-5 md:mt-[50px] text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Donate $750</button>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-5 flex-shrink-0">
+                <img src="assets/double.png" class="w-12">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Double Package</h2>
+                <p class="leading-relaxed text-base">Two PetBuddies, ideal for families with more than one pet, plus all the rewards from the previous levels.</p>
+                <button class="flex mx-auto mt-5 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Donate $1000</button>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-5 flex-shrink-0">
+                <img src="assets/vip.png" class="w-12">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">VIP Experience</h2>
+                <p class="leading-relaxed text-base">A visit to the PetBuddy development site, a meeting with the creation team, and one night at a nearby hotel, plus two personalized PetBuddy devices and all previous rewards.</p>
+                <button class="flex mx-auto mt-5 md:mt-[40px] text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Donate $2500</button>
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+              <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-5 flex-shrink-0">
+                <img src="assets/deal.png" class="w-12">
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Official Partner</h2>
+                <p class="leading-relaxed text-base">Become an official PetBuddy partner, with the company or supporter’s name featured on the website and promotional materials, plus five personalized PetBuddy devices and all previous rewards.</p>
+                <button class="flex mx-auto mt-5 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Donate $5000</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="goals-content" class="hidden">
+      <section class="text-gray-600 body-font">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-5">Our Goals</h1>
+        <div class="container px-5 mx-auto flex flex-wrap">
+          <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-red-500 text-white relative z-10 title-font font-medium text-sm">1</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-24 h-24 bg-red-100 text-red-500 rounded-full inline-flex items-center justify-center">
+                <img src="assets/context.png" class="w-14 ml-3">
+              </div>
+              <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                <h2 class="font-medium title-font text-gray-900 text-xl">Research and Development</h2>
+                <div class="text-gray-500 italic mb-1 ">$50.000</div>
+                <p class="leading-relaxed">Software and hardware engineers, labs and materials.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-red-500 text-white relative z-10 title-font font-medium text-sm">2</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-24 h-24 bg-red-100 text-red-500 rounded-full inline-flex items-center justify-center">
+                <img src="assets/design.png" class="w-14">
+              </div>
+              <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Design and Prototyping</h2>
+                <div class="text-gray-500 italic mb-1 ">$50.000</div>
+                <p class="leading-relaxed">3D design creation, functional prototypes, testing, and design iterations.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-red-500 text-white relative z-10 title-font font-medium text-sm">3</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-24 h-24 bg-red-100 text-red-500 rounded-full inline-flex items-center justify-center">
+                <img src="assets/production.png" class="w-14">
+              </div>
+              <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Initial Production</h2>
+                <div class="text-gray-500 italic mb-1 ">$100.000</div>
+                <p class="leading-relaxed">Manufacturing of an initial batch of units, including the cost of components, assembly, and quality testing.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-red-500 text-white relative z-10 title-font font-medium text-sm">4</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-24 h-24 bg-red-100 text-red-500 rounded-full inline-flex items-center justify-center">
+                <img src="assets/certificate.png" class="w-14 mt-1">
+              </div>
+              <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Certifications and Regulations</h2>
+                <div class="text-gray-500 italic mb-1 ">$20.000</div>
+                <p class="leading-relaxed">Costs to obtain safety certifications and compliance with international regulations.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-red-500 text-white relative z-10 title-font font-medium text-sm">5</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-24 h-24 bg-red-100 text-red-500 rounded-full inline-flex items-center justify-center">
+                <img src="assets/coding.png" class="w-14 ml-1">
+              </div>
+              <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">App Development</h2>
+                <div class="text-gray-500 italic mb-1 ">$40.000</div>
+                <p class="leading-relaxed">Development of the mobile application to control PetBuddy, including user interface design, backend functionalities, and testing.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-red-500 text-white relative z-10 title-font font-medium text-sm">6</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-24 h-24 bg-red-100 text-red-500 rounded-full inline-flex items-center justify-center">
+                <img src="assets/megaphone.png" class="w-14 ml-1">
+              </div>
+              <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Marketing and Ads</h2>
+                <div class="text-gray-500 italic mb-1 ">$30.000</div>
+                <p class="leading-relaxed">Creation of promotional materials, digital marketing campaigns, and participation in tech fairs and events.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-red-500 text-white relative z-10 title-font font-medium text-sm">7</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-24 h-24 bg-red-100 text-red-500 rounded-full inline-flex items-center justify-center">
+                <img src="assets/small-truck.png" class="w-14">
+              </div>
+              <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Distribution and Logistic</h2>
+                <div class="text-gray-500 italic mb-1 ">$20.000</div>
+                <p class="leading-relaxed">Packaging, storage, and shipping of units to supporters.                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-red-500 text-white relative z-10 title-font font-medium text-sm">8</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-24 h-24 bg-red-100 text-red-500 rounded-full inline-flex items-center justify-center">
+                <img src="assets/cut.png" class="w-14 mb-1">
+              </div>
+              <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Contingency</h2>
+                <div class="text-gray-500 italic mb-1 ">$20.000</div>
+                <p class="leading-relaxed">Reserve fund to cover unforeseen costs and variations in estimated expenses.                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-red-500 text-white relative z-10 title-font font-medium text-sm">8</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-24 h-24 bg-red-100 text-red-500 rounded-full inline-flex items-center justify-center">
+                <img src="assets/savings.png" class="w-14 mb-1">
+              </div>
+              <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">GOAL TOTAL</h2>
+                <p class="leading-relaxed">$310.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="contacts-content" class="hidden">
+      <section class="text-gray-600 body-font">
+          <div class="container px-5 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Team</h1>
+              <p class="lg:w-2/3 mx-auto leading-relaxed text-base">This is the team behind the planning and development of PetBuddy.</p>
+            </div>
+            <div class="flex flex-wrap -m-2">
+              <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                  <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/80x80">
+                  <div class="flex-grow">
+                    <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
+                    <p class="text-gray-500">Founder</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                  <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/84x84">
+                  <div class="flex-grow">
+                    <h2 class="text-gray-900 title-font font-medium">Henry Letham</h2>
+                    <p class="text-gray-500">CTO</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                  <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/88x88">
+                  <div class="flex-grow">
+                    <h2 class="text-gray-900 title-font font-medium">Oskar Blinde</h2>
+                    <p class="text-gray-500">Researcher</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                  <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/90x90">
+                  <div class="flex-grow">
+                    <h2 class="text-gray-900 title-font font-medium">John Doe</h2>
+                    <p class="text-gray-500">Hardware Engineer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                  <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/94x94">
+                  <div class="flex-grow">
+                    <h2 class="text-gray-900 title-font font-medium">Martin Eden</h2>
+                    <p class="text-gray-500">Software Engineer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                  <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/98x98">
+                  <div class="flex-grow">
+                    <h2 class="text-gray-900 title-font font-medium">Boris Kitua</h2>
+                    <p class="text-gray-500">App Development</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                  <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/100x90">
+                  <div class="flex-grow">
+                    <h2 class="text-gray-900 title-font font-medium">Atticus Finch</h2>
+                    <p class="text-gray-500">QA Engineer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                  <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/104x94">
+                  <div class="flex-grow">
+                    <h2 class="text-gray-900 title-font font-medium">Alper Kamu</h2>
+                    <p class="text-gray-500">Marketing</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                  <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/108x98">
+                  <div class="flex-grow">
+                    <h2 class="text-gray-900 title-font font-medium">Rodrigo Monchi</h2>
+                    <p class="text-gray-500">Product Manager</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabs = document.querySelectorAll('.TAB-MENU a');
+      const contents = {
+        'about-tab': document.getElementById('about-content'),
+        'rewards-tab': document.getElementById('rewards-content'),
+        'goals-tab': document.getElementById('goals-content'),
+        'contacts-tab': document.getElementById('contacts-content')
+      };
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function(event) {
+          event.preventDefault();
+          // Hide all content divs
+          for (let content in contents) {
+            contents[content].classList.add('hidden');
+          }
+          // Remove active class from all tabs
+          tabs.forEach(t => t.classList.remove('text-red-600', 'border-red-600', 'dark:text-red-500', 'dark:border-red-500'));
+          // Show the selected content div
+          contents[tab.id].classList.remove('hidden');
+          // Add active class to the clicked tab
+          tab.classList.add('text-red-600', 'border-red-600', 'dark:text-red-500', 'dark:border-red-500');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
